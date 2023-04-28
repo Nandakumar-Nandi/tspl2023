@@ -37,30 +37,21 @@
 						<div class="error firstnameerror"></div>
 					</div>
 					<div class="input-box input-small right">
+						<label for="reslocation">PAN NO</label><br>
+						<input type="text" class="inputField reslocation" name="pan">
+						<div class="error reslocationerror"></div>
+					</div>
+					<div class="input-box input-small left">
+						<label for="reslocation">Registration No</label><br>
+						<input type="text" class="inputField reslocation" name="reg_no">
+						<div class="error reslocationerror"></div>
+					</div>
+					<div class="input-box input-small right">
 						<label for="resaddress">Date of Registration</label><br>
 						<input type="date" class="inputField firstname" name="d_o_r">
 						<div class="error resaddresserror"></div>
 					</div>
-					<div class="input-box input-small left">
-						<label for="reslocation">Registration No</label><br>
-						<input type="text" class="inputField reslocation" name="pan">
-						<div class="error reslocationerror"></div>
-					</div>
-					<div class="input-box input-small right">
-						<label for="reslocation">PAN</label><br>
-						<input type="text" class="inputField reslocation" name="pan">
-						<div class="error reslocationerror"></div>
-					</div>
-					<div class="input-box input-textarea left clearfix">
-						<label for="kinresdirection">Address</label><br>
-						<textarea class="inputField kinresdirection" name="address"></textarea>
-						<div class="error kinresdirectionerror"></div>
-					</div>
-					<div class="input-box input-small right">
-						<label for="phone">IT Password</label><br>
-						<input type="text" class="inputField phone" name="itpwd">
-						<div class="error passworderror"></div>
-					</div>
+					
 					<div class="input-box input-small left">
 						<label for="reslocation">TAN</label><br>
 						<input type="text" class="inputField reslocation" name="tan">
@@ -90,6 +81,16 @@
 						<label for="phone">FCRA PASSWORD</label><br>
 						<input type="text" class="inputField phone" name="entitypwd">
 						<div class="error passworderror"></div>
+					</div>
+					<div class="input-box input-small left">
+						<label for="phone">IT Password</label><br>
+						<input type="text" class="inputField phone" name="itpwd">
+						<div class="error passworderror"></div>
+					</div>
+					<div class="input-box input-textarea left clearfix">
+						<label for="kinresdirection">Address</label><br>
+						<textarea class="inputField kinresdirection" name="address"></textarea>
+						<div class="error kinresdirectionerror"></div>
 					</div>
 				
 					<!--<div class="input-box input-small left">
