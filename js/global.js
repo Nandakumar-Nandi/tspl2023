@@ -386,7 +386,7 @@ $(document).ready(function(){
 				    		})
 						$(".displaySuccess").html('');
                         location.href = "../dashboard/";
-						},100)
+						},2000)
 					} else if(status == "failed"){
 						$(".displaySuccess").css("background","#ff0000");
 						$(".displaySuccess").html('<span class="spinicon"><i class="fa fa-exclamation-circle fa-1x"></i></span> Error adding new record')
@@ -398,7 +398,7 @@ $(document).ready(function(){
 				    		})
 						$(".displaySuccess").html('');
 
-						},100)
+						},2000)
 					} else if(status == "exists"){
 						$(".displaySuccess").css("background","#ff0000");
 						$(".displaySuccess").html('<span class="spinicon"><i class="fa fa-exclamation-circle fa-1x"></i></span> Employee ID already exists')
@@ -410,7 +410,7 @@ $(document).ready(function(){
 				    		})
 						$(".displaySuccess").html('');
 
-						},100)
+						},2000)
 					}
 		    	}
     		})
@@ -596,7 +596,7 @@ $(document).ready(function(){
 								})
 							$(".displaySuccess").html('');
 							location.href = "../dashboard/";
-							},100)
+							},2000)
 						} else if(status == "failed"){
 							$(".displaySuccess").css("background","#ff0000");
 							$(".displaySuccess").html('<span class="spinicon"><i class="fa fa-exclamation-circle fa-1x"></i></span> Error adding new record')
@@ -608,7 +608,7 @@ $(document).ready(function(){
 								})
 							$(".displaySuccess").html('');
 	
-							},100)
+							},2000)
 						} else if(status == "exists"){
 							$(".displaySuccess").css("background","#ff0000");
 							$(".displaySuccess").html('<span class="spinicon"><i class="fa fa-exclamation-circle fa-1x"></i></span> Employee ID already exists')
@@ -620,7 +620,7 @@ $(document).ready(function(){
 								})
 							$(".displaySuccess").html('');
 	
-							},100)
+							},2000)
 						}
 					}
 				})
@@ -806,7 +806,7 @@ $(document).ready(function(){
 								})
 							$(".displaySuccess").html('');
 							location.href = "../dashboard/";
-							},100)
+							},2000)
 						} else if(status == "failed"){
 							$(".displaySuccess").css("background","#ff0000");
 							$(".displaySuccess").html('<span class="spinicon"><i class="fa fa-exclamation-circle fa-1x"></i></span> Error adding new record')
@@ -818,7 +818,7 @@ $(document).ready(function(){
 								})
 							$(".displaySuccess").html('');
 	
-							},100)
+							},2000)
 						} else if(status == "exists"){
 							$(".displaySuccess").css("background","#ff0000");
 							$(".displaySuccess").html('<span class="spinicon"><i class="fa fa-exclamation-circle fa-1x"></i></span> Employee ID already exists')
@@ -830,7 +830,7 @@ $(document).ready(function(){
 								})
 							$(".displaySuccess").html('');
 	
-							},100)
+							},2000)
 						}
 					}
 				})
