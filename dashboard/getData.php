@@ -15,9 +15,8 @@
         //set conditions for search
         $whereSQL = $orderSQL = '';
         $keywords = $_POST['keywords'];
-        $sortBy = $_POST['sortBy'];
         if(!empty($keywords)){
-            $whereSQL = "WHERE first_name LIKE '%".$keywords."%' OR last_name LIKE '%".$keywords."%' OR middle_name LIKE '%".$keywords."%'";
+            $whereSQL = "WHERE Name LIKE '%".$keywords."%'";
         }
         if(!empty($sortBy)){
             $orderSQL = " ORDER BY id ".$sortBy;
@@ -26,7 +25,7 @@
         }
 
         //get number of rows
-        $queryNum = $db_connect->query("SELECT COUNT(*) as postNum FROM client ".$whereSQL.$orderSQL);
+        $queryNum = $db_connect->query("SELECT COUNT(*) as postNum FROM individual ".$whereSQL.$orderSQL);
         $resultNum = $queryNum->fetch_assoc();
         $rowCount = $resultNum['postNum'];
 
@@ -41,13 +40,13 @@
 
 
         //get rows
-        $queryNum = mysqli_query($db_connect, "SELECT * FROM client $whereSQL $orderSQL LIMIT $start, $limit");
+        $queryNum = mysqli_query($db_connect, "SELECT * FROM individual $whereSQL $orderSQL LIMIT $start, $limit");
         $queryNumcount = mysqli_num_rows($queryNum);
        
         if($queryNumcount >= 1 ){
                                 while($fetch = mysqli_fetch_assoc($queryNum)){
-                                    $id = $fetch['id'];
-                                    $emp_id = $fetch['employee_id'];
+                                    $Name = $fetch['Name'];
+                                    /*$emp_id = $fetch['employee_id'];
                                     $first_name = $fetch['first_name'];
                                     $middle_name = $fetch['middle_name'];
                                     $last_name = $fetch['last_name'];
@@ -56,12 +55,13 @@
                                     $status = $fetch['status'];
 
                                     $date_employed = date("jS F Y", strtotime($date_employed));
-
-                                    if($middle_name == ""){
+                                    */
+                                    //if(1){
                                         if($usertype == "Admin"){
-                                            echo '                                      
-                                                <li class="emp_item">
-                                                    <div class="l_name">'.$emp_id.'</div>
+                                            echo "                                     
+                                                <li class='emp_item'>
+                                                    <div class='l_name'>'.$Name.'</div></li>'";
+                                                    /*
                                                     <div class="l_pan_no">'.$first_name." ".$last_name.'</div>
                                                     <div class="emp_column">'.$date_employed.'</div>
                                                     <div class="emp_column">'.$job_type.'</div>
@@ -75,7 +75,7 @@
                                                     </div>
                                                 </li>
                                             ';
-                                        } else {
+                                        */}/* else {
                                             echo '                                      
                                                 <li class="emp_item">
                                                     <div class="l_name">'.$emp_id.'</div>
@@ -127,11 +127,10 @@
                                             ';
                                         }
                                     }
-                                }
-            echo $pagination->createLinks();
-        } else {
+                                */}
+            echo $pagination->createLinks();                    }                         /*} else {
             echo '<li class="emp_item"> No employee record found </li>';
-        }
+    */
     }
 
     if($action == "currentemployees"){
