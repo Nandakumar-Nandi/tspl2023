@@ -117,12 +117,12 @@
 				
 						<div class="input-box input-small left">
 						<label for="reslocation">FIRMS-BUSINESS USER</label><br>
-						<input type="text" class="inputField reslocation" name="entity">
+						<input type="text" class="inputField reslocation" name="buisness_entity">
 						<div class="error reslocationerror"></div>
 					</div>
 					<div class="input-box input-small right">
 						<label for="phone">FIRMS-BUSINESS PASSWORD</label><br>
-						<input type="text" class="inputField phone" name="entitypwd">
+						<input type="text" class="inputField phone" name="business_entitypwd">
 						<div class="error passworderror"></div>
 					</div>
 					<div class="input-box input-textarea left clearfix">
@@ -132,7 +132,7 @@
 					</div>
 					<div class="input-box input-textarea left clearfix">
 						<label for="kinresdirection">DIRECTORS DETAILS</label><br>
-						<textarea class="inputField kinresdirection" name="address"></textarea>
+						<textarea class="inputField kinresdirection" name="directordetails"></textarea>
 						<div class="error kinresdirectionerror"></div>
 					</div>
 					<div class="input-box input-textarea left clearfix">
