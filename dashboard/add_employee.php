@@ -9,7 +9,7 @@
 	<section class="side-menu fixed left">
 		<div class="top-sec">
 			<div class="dash_logo">
-				<img src="../images/logo.jpg" alt="CA.VK Logo">
+				<img src="../images/logo.png" alt="CA.VK Logo">
 			</div>			
 			<p>Business Client Records</p>
 		</div>

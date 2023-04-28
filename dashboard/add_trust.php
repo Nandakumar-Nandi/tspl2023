@@ -9,7 +9,7 @@
 	<section class="side-menu fixed left">
 		<div class="top-sec">
 			<div class="dash_logo">
-				<img src="../images/logo.jpg" alt="TSPL Logo">
+				<img src="../images/logo.png" alt="TSPL Logo">
 			</div>			
 			<p>COMPANY RECORDS</p>
 		</div>
@@ -30,7 +30,7 @@
 		<div class="container">
 			<div class="wrapper add_employee clearfix">
 				<div class="section_title">Add TRUST & SOCIETY</div>
-				<form id="addtrust" class="clearfix" method="" action="">
+				<form id="addemployee" class="clearfix" method="" action="">
 					<div class="input-box input-small left">
 						<label for="firstname">Name</label><br>
 						<input type="text" class="inputField firstname" name="Name">
