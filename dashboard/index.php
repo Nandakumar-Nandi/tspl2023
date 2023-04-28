@@ -25,7 +25,7 @@
 	<section class="side-menu fixed left">
 		<div class="top-sec">
 			<div class="dash_logo">
-				<img src="../images/logo.png" alt="Sharpnet Logo">
+				<img src="../images/logo.png" alt="TSPL Logo">
 			</div>			
 			<p>Client Records</p>
 		</div>
@@ -44,7 +44,7 @@
 	<section class="contentSection right clearfix">
 		<div class="container">
 			<div class="wrapper employee_list clearfix">
-				<div class="section_title">All Employees</div>
+				
 				<div class="top-bar">
 					<div class="top-item">
 						<form id="empFilter" method="post" action="">
@@ -52,6 +52,220 @@
 						</form>
 					</div>
 				</div>
+				<div>
+					<div class="section_title">Individuals</div>
+				<?php
+					$getemp = mysqli_query($db_connect, "SELECT * FROM individual ORDER BY id ASC LIMIT $limit");
+					$getempcount = mysqli_num_rows($getemp);
+				?>
+				<ul class="client_list">
+					<li class="client_list_head">
+						<div class="client_item_head emp_id">Name</div>
+						<div class="client_item_head emp_name">Pan Number</div>
+						<div class="client_item_head">Password</div>
+						<div class="client_item_head">Pan Card name</div>
+						<div class="client_item_head emp_status">Aadhar Number</div>
+					</li>
+					<div id="displayempList">
+						<?php
+							if($getempcount >= 1 ){
+								while($fetch = mysqli_fetch_assoc($getemp)){
+									$id = $fetch['id'];
+									$name = $fetch['Name'];
+									$pan_no = $fetch['Pan_Number'];
+									$password = $fetch['Password'];
+									$pan_name = $fetch['Pancard_name'];
+									$aadhar_no = $fetch['Aadhar_no'];
+
+									if($password == ""){
+										if($usertype == "Admin"){
+											echo '										
+												<li class="client_item">
+													<div class="l_name">'.$name.'</div>
+													<div class="l_pan_no">'.$pan_no.'</div>
+													<div class="l_password">'.$password.'</div>
+													<div class="l_pan_name">'.$pan_name.'</div>
+													<div class="l_aadhar_no">'.$aadhar_no.'</div>
+													<div class="emp_column">
+														<ul class="action_list">
+															<li class="action_item action_view" data-id="'.$id.'" title="View"><i class="fa fa-eye"></i></li>
+															<li class="action_item action_edit" data-id="'.$id.'" title="Edit"><i class="fa fa-pencil-square-o"></i></li>
+															<li class="action_item action_delete" data-id="'.$id.'" title="Delete"><i class="fa fa-trash-o"></i></li>
+														</ul>
+													</div>
+												</li>
+											';
+										} else {
+											echo '										
+												<li class="client_item">
+												<div class="l_name">'.$name.'</div>
+												<div class="l_pan_no">'.$pan_no.'</div>
+												<div class="l_password">'.$password.'</div>
+												<div class="l_pan_name">'.$pan_name.'</div>
+												<div class="l_aadhar_no">'.$aadhar_no.'</div>
+												<div class="emp_column">
+														<ul class="action_list">
+															<li class="action_item action_view" data-id="'.$id.'" title="View"><i class="fa fa-eye"></i></li>
+														</ul>
+													</div>
+												</li>
+											';											
+										}
+									} else {
+										if($usertype == "Admin"){
+											echo '										
+												<li class="client_item">
+												<div class="l_name">'.$name.'</div>
+												<div class="l_pan_no">'.$pan_no.'</div>
+												<div class="l_password">'.$password.'</div>
+												<div class="l_pan_name">'.$pan_name.'</div>
+												<div class="l_aadhar_no">'.$aadhar_no.'</div>
+												<div class="emp_column">
+														<ul class="action_list">
+															<li class="action_item action_view" data-id="'.$id.'" title="View"><i class="fa fa-eye"></i></li>
+															<li class="action_item action_edit" data-id="'.$id.'" title="Edit"><i class="fa fa-pencil-square-o"></i></li>
+															<li class="action_item action_delete" data-id="'.$id.'" title="Delete"><i class="fa fa-trash-o"></i></li>
+														</ul>
+													</div>
+												</li>
+											';
+										} else {
+
+											echo '										
+												<li class="client_item">
+												<div class="l_name">'.$name.'</div>
+												<div class="l_pan_no">'.$pan_no.'</div>
+												<div class="l_password">'.$password.'</div>
+												<div class="l_pan_name">'.$pan_name.'</div>
+												<div class="l_aadhar_no">'.$aadhar_no.'</div>
+												<div class="emp_column">
+														<ul class="action_list">
+															<li class="action_item action_view" data-id="'.$id.'" title="View"><i class="fa fa-eye"></i></li>
+														</ul>
+													</div>
+												</li>
+											';
+										}
+									}
+								}
+								echo $pagination->createLinks();
+							} else {
+								echo '<li class="client_item"> No employee record found </li>';
+							}
+						?>
+					</div>
+				</ul>
+			</div>
+
+			<!----->
+				<div class="section_title">Company Details</div>
+			<div>
+				<?php
+					$getemp = mysqli_query($db_connect, "SELECT * FROM individual ORDER BY id ASC LIMIT $limit");
+					$getempcount = mysqli_num_rows($getemp);
+				?>
+				<ul class="client_list">
+					<li class="client_list_head">
+						<div class="client_item_head emp_id">Name</div>
+						<div class="client_item_head emp_name">Pan Number</div>
+						<div class="client_item_head">Password</div>
+						<div class="client_item_head">Pan Card name</div>
+						<div class="client_item_head emp_status">Aadhar Number</div>
+					</li>
+					<div id="displayempList">
+						<?php
+							if($getempcount >= 1 ){
+								while($fetch = mysqli_fetch_assoc($getemp)){
+									$id = $fetch['id'];
+									$name = $fetch['Name'];
+									$pan_no = $fetch['Pan_Number'];
+									$password = $fetch['Password'];
+									$pan_name = $fetch['Pancard_name'];
+									$aadhar_no = $fetch['Aadhar_no'];
+
+									if($password == ""){
+										if($usertype == "Admin"){
+											echo '										
+												<li class="client_item">
+													<div class="l_name">'.$name.'</div>
+													<div class="l_pan_no">'.$pan_no.'</div>
+													<div class="l_password">'.$password.'</div>
+													<div class="l_pan_name">'.$pan_name.'</div>
+													<div class="l_aadhar_no">'.$aadhar_no.'</div>
+													<div class="emp_column">
+														<ul class="action_list">
+															<li class="action_item action_view" data-id="'.$id.'" title="View"><i class="fa fa-eye"></i></li>
+															<li class="action_item action_edit" data-id="'.$id.'" title="Edit"><i class="fa fa-pencil-square-o"></i></li>
+															<li class="action_item action_delete" data-id="'.$id.'" title="Delete"><i class="fa fa-trash-o"></i></li>
+														</ul>
+													</div>
+												</li>
+											';
+										} else {
+											echo '										
+												<li class="client_item">
+												<div class="l_name">'.$name.'</div>
+												<div class="l_pan_no">'.$pan_no.'</div>
+												<div class="l_password">'.$password.'</div>
+												<div class="l_pan_name">'.$pan_name.'</div>
+												<div class="l_aadhar_no">'.$aadhar_no.'</div>
+												<div class="emp_column">
+														<ul class="action_list">
+															<li class="action_item action_view" data-id="'.$id.'" title="View"><i class="fa fa-eye"></i></li>
+														</ul>
+													</div>
+												</li>
+											';											
+										}
+									} else {
+										if($usertype == "Admin"){
+											echo '										
+												<li class="client_item">
+												<div class="l_name">'.$name.'</div>
+												<div class="l_pan_no">'.$pan_no.'</div>
+												<div class="l_password">'.$password.'</div>
+												<div class="l_pan_name">'.$pan_name.'</div>
+												<div class="l_aadhar_no">'.$aadhar_no.'</div>
+												<div class="emp_column">
+														<ul class="action_list">
+															<li class="action_item action_view" data-id="'.$id.'" title="View"><i class="fa fa-eye"></i></li>
+															<li class="action_item action_edit" data-id="'.$id.'" title="Edit"><i class="fa fa-pencil-square-o"></i></li>
+															<li class="action_item action_delete" data-id="'.$id.'" title="Delete"><i class="fa fa-trash-o"></i></li>
+														</ul>
+													</div>
+												</li>
+											';
+										} else {
+
+											echo '										
+												<li class="client_item">
+												<div class="l_name">'.$name.'</div>
+												<div class="l_pan_no">'.$pan_no.'</div>
+												<div class="l_password">'.$password.'</div>
+												<div class="l_pan_name">'.$pan_name.'</div>
+												<div class="l_aadhar_no">'.$aadhar_no.'</div>
+												<div class="emp_column">
+														<ul class="action_list">
+															<li class="action_item action_view" data-id="'.$id.'" title="View"><i class="fa fa-eye"></i></li>
+														</ul>
+													</div>
+												</li>
+											';
+										}
+									}
+								}
+								echo $pagination->createLinks();
+							} else {
+								echo '<li class="client_item"> No employee record found </li>';
+							}
+						?>
+					</div>
+				</ul>
+			</div>
+			
+			<!------>
+				<div class="section_title">Trust and Society</div>
+			<div>
 				<?php
 					$getemp = mysqli_query($db_connect, "SELECT * FROM individual ORDER BY id ASC LIMIT $limit");
 					$getempcount = mysqli_num_rows($getemp);
