@@ -211,7 +211,8 @@ $(document).ready(function(){
     	Add Empolyee Form
     */
     $("#addemployee").submit(function(e){
-    	e.preventDefault();
+    	//e.preventDefault();
+		console.log("hey");
 
     	var empiderror,
     		firstnameerror,
@@ -363,7 +364,7 @@ $(document).ready(function(){
     		kinresdirectionerror = "";
     	}
 
-    	$(".firstnameerror").html(firstnameerror);
+/*    	$(".firstnameerror").html(firstnameerror);
     	$(".middlenameerror").html(middlenameerror);
     	$(".lastnameerror").html(lastnameerror);
     	$(".phoneerror").html(phoneerror);
@@ -383,10 +384,10 @@ $(document).ready(function(){
     	$(".kinphoneerror").html(kinphoneerror);
     	$(".kinresaddresserror").html(kinresaddresserror);
     	$(".kinresdirectionerror").html(kinresdirectionerror);
+*/
 
-
-    	if(firstnameerror == "" && middlenameerror == "" && lastnameerror == "" && phoneerror == "" && jobtypeerror == "" && dateemployederror == "" && resaddresserror == "" && reslocationerror == "" && gpsreslocationerror == "" && resdirectionerror == "" && photoerror == "" && IDnumbererror == "" && fullnameerror == "" && idtypeerror == "" && nationalIDerror == "" && relationshiperror == "" && kinphoneerror == "" && kinresaddresserror == "" && kinresdirectionerror == "" && empstatuserror == "") {
-
+    	//if(firstnameerror == "" && middlenameerror == "" && lastnameerror == "" && phoneerror == "" && jobtypeerror == "" && dateemployederror == "" && resaddresserror == "" && reslocationerror == "" && gpsreslocationerror == "" && resdirectionerror == "" && photoerror == "" && IDnumbererror == "" && fullnameerror == "" && idtypeerror == "" && nationalIDerror == "" && relationshiperror == "" && kinphoneerror == "" && kinresaddresserror == "" && kinresdirectionerror == "" && empstatuserror == "") {
+			alert("hello");
     		$(".displaySuccess").css({
     			"margin-top":"0px",
     			"opacity":"1"
@@ -436,9 +437,12 @@ $(document).ready(function(){
 
 						}, 5000)
 					}
-		    	}
+		    	},
+				error:function(errorx){
+					window.alert(""+errorx);
+				}
     		})
-    	}
+    	//}
 
     })
 
