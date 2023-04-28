@@ -208,33 +208,14 @@ $(document).ready(function(){
 
 
     /*
-    	Add Empolyee Form
+    	Add Individual client Form
     */
     $("#addemployee").submit(function(e){
     	e.preventDefault();
-    	var empiderror,
-    		firstnameerror,
-    		middlenameerror,
-    		lastnameerror,
-    		phoneerror,
-    		jobtypeerror,
-    		dateemployederror,
-    		resaddresserror,
-    		reslocationerror,
-    		gpsreslocationerror,
-    		resdirectionerror,
-    		photoerror,
-    		IDnumbererror,
-    		idtypeerror,
-    		nationalIDerror,
-    		fullnameerror,
-    		relationshiperror,
-    		kinphoneerror,
-    		kinresaddresserror,
-    		empstatuserror,
-    		kinresdirectionerror;
+    	var name_err,pancard_err,
+		password_err,dob_err,pannum_err,aadarnum_err,mobile_err,email_err,father_err,address_err,remarks;;
 
-    	if($(".firstname").val() == ""){
+    	/*if($(".firstname").val() == ""){
     		firstnameerror = "Please enter employee's first mudiyaargy name";
     	} else if($.isNumeric($(".firstname").val()) && $(".firstname").val() != ""){
     		firstnameerror = "this field cannot contain numbers";
@@ -361,8 +342,7 @@ $(document).ready(function(){
     	} else {
     		kinresdirectionerror = "";
     	}
-
-/*    	$(".firstnameerror").html(firstnameerror);
+    	$(".firstnameerror").html(firstnameerror);
     	$(".middlenameerror").html(middlenameerror);
     	$(".lastnameerror").html(lastnameerror);
     	$(".phoneerror").html(phoneerror);
@@ -406,7 +386,7 @@ $(document).ready(function(){
 				    		})
 						$(".displaySuccess").html('');
                         location.href = "../dashboard/";
-						}, 2500)
+						},100)
 					} else if(status == "failed"){
 						$(".displaySuccess").css("background","#ff0000");
 						$(".displaySuccess").html('<span class="spinicon"><i class="fa fa-exclamation-circle fa-1x"></i></span> Error adding new record')
@@ -418,7 +398,7 @@ $(document).ready(function(){
 				    		})
 						$(".displaySuccess").html('');
 
-						}, 5000)
+						},100)
 					} else if(status == "exists"){
 						$(".displaySuccess").css("background","#ff0000");
 						$(".displaySuccess").html('<span class="spinicon"><i class="fa fa-exclamation-circle fa-1x"></i></span> Employee ID already exists')
@@ -430,26 +410,462 @@ $(document).ready(function(){
 				    		})
 						$(".displaySuccess").html('');
 
-						}, 5000)
+						},100)
 					}
-		    	},
-				error:function(errorx){
-					window.alert(""+errorx);
-				}
+		    	}
     		})
     	//}
 
     })
-
+    /*
+    	Add Company client Form
+    */
+		$("#addcompany").submit(function(e){
+			e.preventDefault();
+			var name_err,pancard_err,
+			password_err,dob_err,pannum_err,aadarnum_err,mobile_err,email_err,father_err,address_err,remarks;;
+	
+			/*if($(".firstname").val() == ""){
+				firstnameerror = "Please enter employee's first mudiyaargy name";
+			} else if($.isNumeric($(".firstname").val()) && $(".firstname").val() != ""){
+				firstnameerror = "this field cannot contain numbers";
+			} else {
+				firstnameerror = "";
+			}
+	
+			if($.isNumeric($(".middlename").val()) && $(".middlename").val() != ""){
+				middlenameerror = "this field cannot contain numbers";
+			} else {
+				middlenameerror = "";
+			}
+	
+			if($(".lastname").val() == ""){
+				lastnameerror = "Please enter employee's last name";
+			} else if($.isNumeric($(".lastname").val()) && $(".lastname").val() != ""){
+				lastnameerror = "this field cannot contain numbers";
+			} else {
+				lastnameerror = "";
+			}
+	
+			if($(".phone").val() == ""){
+				phoneerror = "Please enter phone number";
+			} else if(!($.isNumeric($(".phone").val())) && $(".phone").val() != ""){
+				phoneerror = "this field cannot contain letters";
+			} else {
+				phoneerror = "";
+			}
+	
+			if($(".jobtype").val() == ""){
+				jobtypeerror = "Please enter Job type";
+			} else {
+				jobtypeerror = "";
+			}
+	
+			if($(".dateemployed").val() == ""){
+				dateemployederror = "Please enter employment date";
+			} else {
+				dateemployederror = "";
+			}
+	
+			if($(".empstatus").val() == ""){
+				empstatuserror = "Please select status of employee";
+			} else {
+				empstatuserror = "";
+			}
+	
+			if($(".resaddress").val() == ""){
+				resaddresserror = "Please enter residential address";
+			} else {
+				resaddresserror = "";
+			}
+	
+			if($(".reslocation").val() == ""){
+				reslocationerror = "Please enter location of residence";
+			} else {
+				reslocationerror = "";
+			}
+	
+			if($(".gpsreslocation").val() == ""){
+				gpsreslocationerror = "Please enter residence gps location";
+			} else {
+				gpsreslocationerror = "";
+			}
+	
+			if($(".resdirection").val() == ""){
+				resdirectionerror = "Please enter direction to employee's residence";
+			} else {
+				resdirectionerror = "";
+			}
+	
+			if($(".passport_file").html() == ""){
+				photoerror = "select a file and click upload";
+			} else {
+				photoerror = "";
+			}
+	
+			if($(".idnumber").val() == ""){
+				IDnumbererror = "Please enter national ID number";
+			} else {
+				IDnumbererror = "";
+			}
+	
+			if($(".idtype").val() == ""){
+				idtypeerror = "Select ID type associated with ID number";
+			} else {
+				idtypeerror = "";
+			}
+	
+			if($(".selected_nationalID_file").html() == ""){
+				nationalIDerror = "select a file and click upload";
+			} else {
+				nationalIDerror = "";
+			}
+	
+			if($(".fullname").val() == ""){
+				fullnameerror = "Please enter full name of next of kin";
+			} else {
+				fullnameerror = "";
+			}
+	
+			if($(".relationship").val() == ""){
+				relationshiperror = "Please enter relationship to next of kin";
+			} else {
+				relationshiperror = "";
+			}
+	
+			if($(".kinphone").val() == ""){
+				kinphoneerror = "Please enter phone number of next of kin";
+			} else if(!($.isNumeric($(".kinphone").val())) && $(".kinphone").val() != ""){
+				kinphoneerror = "this field cannot contain letters";
+			} else {
+				kinphoneerror = "";
+			}
+	
+			if($(".kinresaddress").val() == ""){
+				kinresaddresserror = "Please enter Residential Address of next of kin";
+			} else {
+				kinresaddresserror = "";
+			}
+	
+			if($(".kinresdirection").val() == ""){
+				kinresdirectionerror = "Please enter phone number of next of kin";
+			} else {
+				kinresdirectionerror = "";
+			}
+			$(".firstnameerror").html(firstnameerror);
+			$(".middlenameerror").html(middlenameerror);
+			$(".lastnameerror").html(lastnameerror);
+			$(".phoneerror").html(phoneerror);
+			$(".jobtypeerror").html(jobtypeerror);
+			$(".dateemployederror").html(dateemployederror);
+			$(".empstatuserror").html(empstatuserror);
+			$(".resaddresserror").html(resaddresserror);
+			$(".reslocationerror").html(reslocationerror);
+			$(".gpsreslocationerror").html(gpsreslocationerror);
+			$(".resdirectionerror").html(resdirectionerror);
+			$(".photoerror").html(photoerror);
+			$(".IDnumbererror").html(IDnumbererror);
+			$(".fullnameerror").html(fullnameerror);
+			$(".idtypeerror").html(idtypeerror);
+			$(".nationalIDerror").html(nationalIDerror);
+			$(".relationshiperror").html(relationshiperror);
+			$(".kinphoneerror").html(kinphoneerror);
+			$(".kinresaddresserror").html(kinresaddresserror);
+			$(".kinresdirectionerror").html(kinresdirectionerror);
+	*/
+			//if(firstnameerror == "" && middlenameerror == "" && lastnameerror == "" && phoneerror == "" && jobtypeerror == "" && dateemployederror == "" && resaddresserror == "" && reslocationerror == "" && gpsreslocationerror == "" && resdirectionerror == "" && photoerror == "" && IDnumbererror == "" && fullnameerror == "" && idtypeerror == "" && nationalIDerror == "" && relationshiperror == "" && kinphoneerror == "" && kinresaddresserror == "" && kinresdirectionerror == "" && empstatuserror == "") {
+				$(".displaySuccess").css({
+					"margin-top":"0px",
+					"opacity":"1"
+				})
+				$(".displaySuccess").html('<span class="spinicon"><i class="fa fa-spinner fa-spin fa-1x fa-fw"></i></span> Adding new employee record');
+	
+				$.ajax({
+					 url: 'addcompany.php',
+					 type: 'POST',
+					dataType: 'JSON',
+					data: $("#addcompany").serialize(),
+					success: function(data){
+						var status = (data.status);
+						if(status == "Success"){
+							$(".displaySuccess").html('<span class="spinicon"><i class="fa fa-check fa-1x"></i></span> Record added successfully')
+							setTimeout(function(){
+								$(".displaySuccess").css({
+									"margin-top":"",
+									"opacity":""
+								})
+							$(".displaySuccess").html('');
+							location.href = "../dashboard/";
+							},100)
+						} else if(status == "failed"){
+							$(".displaySuccess").css("background","#ff0000");
+							$(".displaySuccess").html('<span class="spinicon"><i class="fa fa-exclamation-circle fa-1x"></i></span> Error adding new record')
+							setTimeout(function(){
+								$(".displaySuccess").css({
+									"margin-top":"",
+									"opacity":"",
+									"background":""
+								})
+							$(".displaySuccess").html('');
+	
+							},100)
+						} else if(status == "exists"){
+							$(".displaySuccess").css("background","#ff0000");
+							$(".displaySuccess").html('<span class="spinicon"><i class="fa fa-exclamation-circle fa-1x"></i></span> Employee ID already exists')
+							setTimeout(function(){
+								$(".displaySuccess").css({
+									"margin-top":"",
+									"opacity":"",
+									"background":""
+								})
+							$(".displaySuccess").html('');
+	
+							},100)
+						}
+					}
+				})
+			//}
+	
+		})
+/*
+    	Add Company client Form
+    */
+		$("#addtrust").submit(function(e){
+			e.preventDefault();
+			var name_err,pancard_err,
+			password_err,dob_err,pannum_err,aadarnum_err,mobile_err,email_err,father_err,address_err,remarks;;
+	
+			/*if($(".firstname").val() == ""){
+				firstnameerror = "Please enter employee's first mudiyaargy name";
+			} else if($.isNumeric($(".firstname").val()) && $(".firstname").val() != ""){
+				firstnameerror = "this field cannot contain numbers";
+			} else {
+				firstnameerror = "";
+			}
+	
+			if($.isNumeric($(".middlename").val()) && $(".middlename").val() != ""){
+				middlenameerror = "this field cannot contain numbers";
+			} else {
+				middlenameerror = "";
+			}
+	
+			if($(".lastname").val() == ""){
+				lastnameerror = "Please enter employee's last name";
+			} else if($.isNumeric($(".lastname").val()) && $(".lastname").val() != ""){
+				lastnameerror = "this field cannot contain numbers";
+			} else {
+				lastnameerror = "";
+			}
+	
+			if($(".phone").val() == ""){
+				phoneerror = "Please enter phone number";
+			} else if(!($.isNumeric($(".phone").val())) && $(".phone").val() != ""){
+				phoneerror = "this field cannot contain letters";
+			} else {
+				phoneerror = "";
+			}
+	
+			if($(".jobtype").val() == ""){
+				jobtypeerror = "Please enter Job type";
+			} else {
+				jobtypeerror = "";
+			}
+	
+			if($(".dateemployed").val() == ""){
+				dateemployederror = "Please enter employment date";
+			} else {
+				dateemployederror = "";
+			}
+	
+			if($(".empstatus").val() == ""){
+				empstatuserror = "Please select status of employee";
+			} else {
+				empstatuserror = "";
+			}
+	
+			if($(".resaddress").val() == ""){
+				resaddresserror = "Please enter residential address";
+			} else {
+				resaddresserror = "";
+			}
+	
+			if($(".reslocation").val() == ""){
+				reslocationerror = "Please enter location of residence";
+			} else {
+				reslocationerror = "";
+			}
+	
+			if($(".gpsreslocation").val() == ""){
+				gpsreslocationerror = "Please enter residence gps location";
+			} else {
+				gpsreslocationerror = "";
+			}
+	
+			if($(".resdirection").val() == ""){
+				resdirectionerror = "Please enter direction to employee's residence";
+			} else {
+				resdirectionerror = "";
+			}
+	
+			if($(".passport_file").html() == ""){
+				photoerror = "select a file and click upload";
+			} else {
+				photoerror = "";
+			}
+	
+			if($(".idnumber").val() == ""){
+				IDnumbererror = "Please enter national ID number";
+			} else {
+				IDnumbererror = "";
+			}
+	
+			if($(".idtype").val() == ""){
+				idtypeerror = "Select ID type associated with ID number";
+			} else {
+				idtypeerror = "";
+			}
+	
+			if($(".selected_nationalID_file").html() == ""){
+				nationalIDerror = "select a file and click upload";
+			} else {
+				nationalIDerror = "";
+			}
+	
+			if($(".fullname").val() == ""){
+				fullnameerror = "Please enter full name of next of kin";
+			} else {
+				fullnameerror = "";
+			}
+	
+			if($(".relationship").val() == ""){
+				relationshiperror = "Please enter relationship to next of kin";
+			} else {
+				relationshiperror = "";
+			}
+	
+			if($(".kinphone").val() == ""){
+				kinphoneerror = "Please enter phone number of next of kin";
+			} else if(!($.isNumeric($(".kinphone").val())) && $(".kinphone").val() != ""){
+				kinphoneerror = "this field cannot contain letters";
+			} else {
+				kinphoneerror = "";
+			}
+	
+			if($(".kinresaddress").val() == ""){
+				kinresaddresserror = "Please enter Residential Address of next of kin";
+			} else {
+				kinresaddresserror = "";
+			}
+	
+			if($(".kinresdirection").val() == ""){
+				kinresdirectionerror = "Please enter phone number of next of kin";
+			} else {
+				kinresdirectionerror = "";
+			}
+			$(".firstnameerror").html(firstnameerror);
+			$(".middlenameerror").html(middlenameerror);
+			$(".lastnameerror").html(lastnameerror);
+			$(".phoneerror").html(phoneerror);
+			$(".jobtypeerror").html(jobtypeerror);
+			$(".dateemployederror").html(dateemployederror);
+			$(".empstatuserror").html(empstatuserror);
+			$(".resaddresserror").html(resaddresserror);
+			$(".reslocationerror").html(reslocationerror);
+			$(".gpsreslocationerror").html(gpsreslocationerror);
+			$(".resdirectionerror").html(resdirectionerror);
+			$(".photoerror").html(photoerror);
+			$(".IDnumbererror").html(IDnumbererror);
+			$(".fullnameerror").html(fullnameerror);
+			$(".idtypeerror").html(idtypeerror);
+			$(".nationalIDerror").html(nationalIDerror);
+			$(".relationshiperror").html(relationshiperror);
+			$(".kinphoneerror").html(kinphoneerror);
+			$(".kinresaddresserror").html(kinresaddresserror);
+			$(".kinresdirectionerror").html(kinresdirectionerror);
+	*/
+			//if(firstnameerror == "" && middlenameerror == "" && lastnameerror == "" && phoneerror == "" && jobtypeerror == "" && dateemployederror == "" && resaddresserror == "" && reslocationerror == "" && gpsreslocationerror == "" && resdirectionerror == "" && photoerror == "" && IDnumbererror == "" && fullnameerror == "" && idtypeerror == "" && nationalIDerror == "" && relationshiperror == "" && kinphoneerror == "" && kinresaddresserror == "" && kinresdirectionerror == "" && empstatuserror == "") {
+				$(".displaySuccess").css({
+					"margin-top":"0px",
+					"opacity":"1"
+				})
+				$(".displaySuccess").html('<span class="spinicon"><i class="fa fa-spinner fa-spin fa-1x fa-fw"></i></span> Adding new employee record');
+	
+				$.ajax({
+					 url: 'addtrust.php',
+					 type: 'POST',
+					dataType: 'JSON',
+					data: $("#addtrust").serialize(),
+					success: function(data){
+						var status = (data.status);
+						if(status == "Success"){
+							$(".displaySuccess").html('<span class="spinicon"><i class="fa fa-check fa-1x"></i></span> Record added successfully')
+							setTimeout(function(){
+								$(".displaySuccess").css({
+									"margin-top":"",
+									"opacity":""
+								})
+							$(".displaySuccess").html('');
+							location.href = "../dashboard/";
+							},100)
+						} else if(status == "failed"){
+							$(".displaySuccess").css("background","#ff0000");
+							$(".displaySuccess").html('<span class="spinicon"><i class="fa fa-exclamation-circle fa-1x"></i></span> Error adding new record')
+							setTimeout(function(){
+								$(".displaySuccess").css({
+									"margin-top":"",
+									"opacity":"",
+									"background":""
+								})
+							$(".displaySuccess").html('');
+	
+							},100)
+						} else if(status == "exists"){
+							$(".displaySuccess").css("background","#ff0000");
+							$(".displaySuccess").html('<span class="spinicon"><i class="fa fa-exclamation-circle fa-1x"></i></span> Employee ID already exists')
+							setTimeout(function(){
+								$(".displaySuccess").css({
+									"margin-top":"",
+									"opacity":"",
+									"background":""
+								})
+							$(".displaySuccess").html('');
+	
+							},100)
+						}
+					}
+				})
+			//}
+	
+		})
+	
    /*
-    	Add Empolyee Form
+    	Edit Empolyee Form
     */
     $("#editemployee").submit(function(e){
     	e.preventDefault();
 
-    	var name_err,pancard_err,
-		password_err,dob_err,pannum_err,aadarnum_err,mobile_err,email_err,father_err,address_err,remarks;
-		/*
+    	var empiderror,
+    		firstnameerror,
+    		middlenameerror,
+    		lastnameerror,
+    		phoneerror,
+    		jobtypeerror,
+    		dateemployederror,
+    		resaddresserror,
+    		reslocationerror,
+    		gpsreslocationerror,
+    		resdirectionerror,
+    		photoerror,
+    		IDnumbererror,
+    		idtypeerror,
+    		nationalIDerror,
+    		fullnameerror,
+    		relationshiperror,
+    		kinphoneerror,
+    		kinresaddresserror,
+    		empstatuserror,
+    		kinresdirectionerror;
+
     	if($(".firstname").val() == ""){
     		firstnameerror = "Please enter employee's first name";
     	} else if($.isNumeric($(".firstname").val()) && $(".firstname").val() != ""){
@@ -587,10 +1003,10 @@ $(document).ready(function(){
     	$(".relationshiperror").html(relationshiperror);
     	$(".kinphoneerror").html(kinphoneerror);
     	$(".kinresaddresserror").html(kinresaddresserror);
-    	$(".kinresdirectionerror").html(kinresdirectionerror);*/
+    	$(".kinresdirectionerror").html(kinresdirectionerror);
 
 
-    	//if(firstnameerror == "" && middlenameerror == "" && lastnameerror == "" && phoneerror == "" && jobtypeerror == "" && dateemployederror == "" && resaddresserror == "" && reslocationerror == "" && gpsreslocationerror == "" && resdirectionerror == "" && IDnumbererror == "" && fullnameerror == "" && idtypeerror == "" &&  relationshiperror == "" && kinphoneerror == "" && kinresaddresserror == "" && kinresdirectionerror == "" && empstatuserror == "") {
+    	if(firstnameerror == "" && middlenameerror == "" && lastnameerror == "" && phoneerror == "" && jobtypeerror == "" && dateemployederror == "" && resaddresserror == "" && reslocationerror == "" && gpsreslocationerror == "" && resdirectionerror == "" && IDnumbererror == "" && fullnameerror == "" && idtypeerror == "" &&  relationshiperror == "" && kinphoneerror == "" && kinresaddresserror == "" && kinresdirectionerror == "" && empstatuserror == "") {
 
     		$(".displaySuccess").css({
     			"margin-top":"0px",
@@ -615,8 +1031,8 @@ $(document).ready(function(){
 				    		})
 						$(".displaySuccess").html('');
 
-						},1000)
-					}else if(status == "failed"){
+						}, 5000)
+					} else if(status == "failed"){
 						$(".displaySuccess").css("background","#ff0000");
 						$(".displaySuccess").html('<span class="spinicon"><i class="fa fa-exclamation-circle fa-1x"></i></span> Error adding new record')
 						setTimeout(function(){
@@ -627,7 +1043,7 @@ $(document).ready(function(){
 				    		})
 						$(".displaySuccess").html('');
 
-						},2000)
+						}, 5000)
 					} else if(status == "exists"){
 						$(".displaySuccess").css("background","#ff0000");
 						$(".displaySuccess").html('<span class="spinicon"><i class="fa fa-exclamation-circle fa-1x"></i></span> Employee ID already exists')
@@ -639,11 +1055,11 @@ $(document).ready(function(){
 				    		})
 						$(".displaySuccess").html('');
 
-						}, 2000)
+						}, 5000)
 					}
 		    	}
     		})
-    	//}
+    	}
 
     })
 

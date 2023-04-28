@@ -6,7 +6,7 @@
     $limit = 10;
 	    
 	//get number of rows
-	$queryNum = $db_connect->query("SELECT COUNT(*) as postNum FROM client LIMIT $limit");
+	$queryNum = $db_connect->query("SELECT COUNT(*) as postNum FROM individual LIMIT $limit");
 	$resultNum = $queryNum->fetch_assoc();
 	$rowCount = $resultNum['postNum'];
 										    
@@ -53,7 +53,7 @@
 					</div>
 				</div>
 				<?php
-					$getemp = mysqli_query($db_connect, "SELECT * FROM client ORDER BY id ASC LIMIT $limit");
+					$getemp = mysqli_query($db_connect, "SELECT * FROM individual ORDER BY id ASC LIMIT $limit");
 					$getempcount = mysqli_num_rows($getemp);
 				?>
 				<ul class="client_list">

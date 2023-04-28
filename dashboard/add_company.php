@@ -30,7 +30,7 @@
 		<div class="container">
 			<div class="wrapper add_employee clearfix">
 				<div class="section_title">Add COMPANY</div>
-				<form id="addemployee" class="clearfix" method="" action="">
+				<form id="addcompany" class="clearfix" method="" action="">
 					<div class="input-box input-small left">
 						<label for="firstname">Name</label><br>
 						<input type="text" class="inputField firstname" name="Name">
@@ -148,7 +148,7 @@
 		</div>
 	</section>
 <script type="text/javascript" src="../js/global.js"></script>
-</body>
+</body>  
 </html>
 
 
