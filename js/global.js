@@ -212,8 +212,6 @@ $(document).ready(function(){
     */
     $("#addemployee").submit(function(e){
     	//e.preventDefault();
-		console.log("hey");
-
     	var empiderror,
     		firstnameerror,
     		middlenameerror,
@@ -237,7 +235,7 @@ $(document).ready(function(){
     		kinresdirectionerror;
 
     	if($(".firstname").val() == ""){
-    		firstnameerror = "Please enter employee's first name";
+    		firstnameerror = "Please enter employee's first mudiyaargy name";
     	} else if($.isNumeric($(".firstname").val()) && $(".firstname").val() != ""){
     		firstnameerror = "this field cannot contain numbers";
     	} else {
@@ -385,7 +383,7 @@ $(document).ready(function(){
     	$(".kinresaddresserror").html(kinresaddresserror);
     	$(".kinresdirectionerror").html(kinresdirectionerror);
 */
-
+alert("hello");
     	//if(firstnameerror == "" && middlenameerror == "" && lastnameerror == "" && phoneerror == "" && jobtypeerror == "" && dateemployederror == "" && resaddresserror == "" && reslocationerror == "" && gpsreslocationerror == "" && resdirectionerror == "" && photoerror == "" && IDnumbererror == "" && fullnameerror == "" && idtypeerror == "" && nationalIDerror == "" && relationshiperror == "" && kinphoneerror == "" && kinresaddresserror == "" && kinresdirectionerror == "" && empstatuserror == "") {
 			alert("hello");
     		$(".displaySuccess").css({
@@ -401,7 +399,6 @@ $(document).ready(function(){
 		        data: $("#addemployee").serialize(),
 		    	success: function(data){
 					var status = (data.status);
-
 					if(status == "Success"){
 						$(".displaySuccess").html('<span class="spinicon"><i class="fa fa-check fa-1x"></i></span> Record added successfully')
 						setTimeout(function(){
