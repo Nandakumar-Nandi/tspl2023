@@ -211,7 +211,7 @@ $(document).ready(function(){
     	Add Empolyee Form
     */
     $("#addemployee").submit(function(e){
-    	//e.preventDefault();
+    	e.preventDefault();
     	var empiderror,
     		firstnameerror,
     		middlenameerror,
@@ -383,9 +383,7 @@ $(document).ready(function(){
     	$(".kinresaddresserror").html(kinresaddresserror);
     	$(".kinresdirectionerror").html(kinresdirectionerror);
 */
-alert("hello");
     	//if(firstnameerror == "" && middlenameerror == "" && lastnameerror == "" && phoneerror == "" && jobtypeerror == "" && dateemployederror == "" && resaddresserror == "" && reslocationerror == "" && gpsreslocationerror == "" && resdirectionerror == "" && photoerror == "" && IDnumbererror == "" && fullnameerror == "" && idtypeerror == "" && nationalIDerror == "" && relationshiperror == "" && kinphoneerror == "" && kinresaddresserror == "" && kinresdirectionerror == "" && empstatuserror == "") {
-			alert("hello");
     		$(".displaySuccess").css({
     			"margin-top":"0px",
     			"opacity":"1"
