@@ -81,7 +81,7 @@
  <body id="loginPage">
  	<div class="login_wrapper clearfix">
  		<div class="logo_login">
- 			<img src="images/logo.jpg" alt=" Logo">
+ 			<img src="images/logo.png" alt=" Logo">
  		</div>
         <?php
             if(isset($_GET['error'])){

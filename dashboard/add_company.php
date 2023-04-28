@@ -9,7 +9,7 @@
 	<section class="side-menu fixed left">
 		<div class="top-sec">
 			<div class="dash_logo">
-				<img src="../images/logo.jpg" alt="TSPL Logo">
+				<img src="../images/logo.png" alt="TSPL Logo">
 			</div>			
 			<p>COMPANY RECORDS</p>
 		</div>
