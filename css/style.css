@@ -237,16 +237,35 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.9em;
     border-right: 1px solid #024667;
 }
-.client_item_head.l_name{
-    width: 300px;
+.l_name{
+    margin: 10px;
+     display: inline-block;
+    width: 160px;
+  
 }
-.client_item_head.l_name {
+.l_pan_no{
+     display: inline-block;
+    width: 160px;
+  
+}
+.l_password{
+     display: inline-block;
+    width: 160px;
+ 
+}
+.l_aadhar_no{
+     display: inline-block;
+    width: 160px;
+  ;
+}
+.l_pan_name{
+     display: inline-block;
     width: 160px;
 }
 .emp_column{
     display: inline-block;
-    width: 16%;
-    padding: 0px 10px;    
+    width: 15%;
+    padding: 0px 0px;    
 }
 .emp_status, .client_item_head.emp_status{
     width: 15%;    

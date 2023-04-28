@@ -51,13 +51,9 @@
 						<input type="text" class="inputField reslocation" name="cin">
 						<div class="error reslocationerror"></div>
 					</div>
-					<div class="input-box input-textarea left clearfix">
-						<label for="kinresdirection">Address</label><br>
-						<textarea class="inputField kinresdirection" name="address"></textarea>
-						<div class="error kinresdirectionerror"></div>
-					</div>
+					
 					<div class="input-box input-small left">
-						<label for="reslocation">PAN</label><br>
+						<label for="reslocation">PAN NO.</label><br>
 						<input type="text" class="inputField reslocation" name="pan">
 						<div class="error reslocationerror"></div>
 					</div>
@@ -128,6 +124,11 @@
 						<label for="phone">FIRMS-BUSINESS PASSWORD</label><br>
 						<input type="text" class="inputField phone" name="entitypwd">
 						<div class="error passworderror"></div>
+					</div>
+					<div class="input-box input-textarea left clearfix">
+						<label for="kinresdirection">Address</label><br>
+						<textarea class="inputField kinresdirection" name="address"></textarea>
+						<div class="error kinresdirectionerror"></div>
 					</div>
 					<div class="input-box input-textarea left clearfix">
 						<label for="kinresdirection">DIRECTORS DETAILS</label><br>

@@ -82,7 +82,7 @@
 													<div class="l_name">'.$name.'</div>
 													<div class="l_pan_no">'.$pan_no.'</div>
 													<div class="l_password">'.$password.'</div>
-													<div class-"l_pan_name">'.$pan_name.'</div>
+													<div class="l_pan_name">'.$pan_name.'</div>
 													<div class="l_aadhar_no">'.$aadhar_no.'</div>
 													<div class="emp_column">
 														<ul class="action_list">
@@ -99,7 +99,7 @@
 												<div class="l_name">'.$name.'</div>
 												<div class="l_pan_no">'.$pan_no.'</div>
 												<div class="l_password">'.$password.'</div>
-												<div class-"l_pan_name">'.$pan_name.'</div>
+												<div class="l_pan_name">'.$pan_name.'</div>
 												<div class="l_aadhar_no">'.$aadhar_no.'</div>
 												<div class="emp_column">
 														<ul class="action_list">
@@ -116,7 +116,7 @@
 												<div class="l_name">'.$name.'</div>
 												<div class="l_pan_no">'.$pan_no.'</div>
 												<div class="l_password">'.$password.'</div>
-												<div class-"l_pan_name">'.$pan_name.'</div>
+												<div class="l_pan_name">'.$pan_name.'</div>
 												<div class="l_aadhar_no">'.$aadhar_no.'</div>
 												<div class="emp_column">
 														<ul class="action_list">
@@ -134,7 +134,7 @@
 												<div class="l_name">'.$name.'</div>
 												<div class="l_pan_no">'.$pan_no.'</div>
 												<div class="l_password">'.$password.'</div>
-												<div class-"l_pan_name">'.$pan_name.'</div>
+												<div class="l_pan_name">'.$pan_name.'</div>
 												<div class="l_aadhar_no">'.$aadhar_no.'</div>
 												<div class="emp_column">
 														<ul class="action_list">
