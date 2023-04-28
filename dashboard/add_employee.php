@@ -16,7 +16,9 @@
 		<ul class="nav">
 			<li class="nav-item"><a href="../dashboard"><span class="nav-icon"><i class="fa fa-users"></i></span>All CLIENTS</a></li>
 			<?php if($usertype == "Admin"){ ?>
-				<li class="nav-item current"><a href="../dashboard/add_employee.php"><span class="nav-icon"><i class="fa fa-user-plus"></i></span>Add NEW CLIENT</a></li>
+				<li class="nav-item current"><a href="../dashboard/add_employee.php"><span class="nav-icon"><i class="fa fa-user-plus"></i></span>Add Individual</a></li>
+                <li class="nav-item current"><a href="../dashboard/add_company.php"><span class="nav-icon"><i class="fa fa-user-plus"></i></span>Add Company</a></li>
+                <li class="nav-item current"><a href="../dashboard/add_trust.php"><span class="nav-icon"><i class="fa fa-user-plus"></i></span>Add T&S</a></li>
 				<li class="nav-item"><a href="../dashboard/add_user.php"><span class="nav-icon"><i class="fa fa-user"></i></span>Add User</a></li>
 			<?php		} ?>
 			<li class="nav-item"><a href="../dashboard/settings.php"><span class="nav-icon"><i class="fa fa-cog"></i></span>Settings</a></li>

@@ -61,7 +61,7 @@
 						<input type="text" class="inputField reslocation" name="pan">
 						<div class="error reslocationerror"></div>
 					</div>
-					<div class="input-box input-small left">
+					<div class="input-box input-small right">
 						<label for="phone">IT Password</label><br>
 						<input type="text" class="inputField phone" name="itpwd">
 						<div class="error passworderror"></div>
@@ -71,7 +71,7 @@
 						<input type="text" class="inputField reslocation" name="tan">
 						<div class="error reslocationerror"></div>
 					</div>
-					<div class="input-box input-small left">
+					<div class="input-box input-small right">
 						<label for="phone">TAN Password</label><br>
 						<input type="text" class="inputField phone" name="tanpwd">
 						<div class="error passworderror"></div>
@@ -81,51 +81,50 @@
 						<input type="text" class="inputField reslocation" name="traces">
 						<div class="error reslocationerror"></div>
 					</div>
-					<div class="input-box input-small left">
+					<div class="input-box input-small right">
 						<label for="phone">TRACES Password</label><br>
 						<input type="text" class="inputField phone" name="tracespwd">
 						<div class="error passworderror"></div>
-					</div>
 					</div>
 						<div class="input-box input-small left">
 						<label for="reslocation">MCA ID-V2</label><br>
 						<input type="text" class="inputField reslocation" name="idv2">
 						<div class="error reslocationerror"></div>
 					</div>
-					<div class="input-box input-small left">
+					<div class="input-box input-small right">
 						<label for="phone">MCA Password-V2</label><br>
 						<input type="text" class="inputField phone" name="idv2pwd">
 						<div class="error passworderror"></div>
 					</div>
-					</div>
+				
 						<div class="input-box input-small left">
 						<label for="reslocation">MCA ID-V3</label><br>
 						<input type="text" class="inputField reslocation" name="idv3">
 						<div class="error reslocationerror"></div>
 					</div>
-					<div class="input-box input-small left">
+					<div class="input-box input-small right">
 						<label for="phone">MCA Password-V3</label><br>
 						<input type="text" class="inputField phone" name="idv3pwd">
 						<div class="error passworderror"></div>
 					</div>
-					</div>
+					
 						<div class="input-box input-small left">
 						<label for="reslocation">FIRMS-ENTITY USER</label><br>
 						<input type="text" class="inputField reslocation" name="entity">
 						<div class="error reslocationerror"></div>
 					</div>
-					<div class="input-box input-small left">
+					<div class="input-box input-small right">
 						<label for="phone">FIRMS-ENTITY PASSWORD</label><br>
 						<input type="text" class="inputField phone" name="entitypwd">
 						<div class="error passworderror"></div>
 					</div>
-					</div>
+				
 						<div class="input-box input-small left">
 						<label for="reslocation">FIRMS-BUSINESS USER</label><br>
 						<input type="text" class="inputField reslocation" name="entity">
 						<div class="error reslocationerror"></div>
 					</div>
-					<div class="input-box input-small left">
+					<div class="input-box input-small right">
 						<label for="phone">FIRMS-BUSINESS PASSWORD</label><br>
 						<input type="text" class="inputField phone" name="entitypwd">
 						<div class="error passworderror"></div>
