@@ -25,7 +25,7 @@
 	<section class="side-menu fixed left">
 		<div class="top-sec">
 			<div class="dash_logo">
-				<img src="../images/logo.png" alt="Sharpnet Logo">
+				<img src="../images/logo.png" alt="TSPL Logo">
 			</div>			
 			<p>Client Records</p>
 		</div>
@@ -158,7 +158,7 @@
 			</div>
 
 			<!----->
-				<div class="section_title">Company details</div>
+				<div class="section_title">Company Details</div>
 			<div>
 				<?php
 					$getemp = mysqli_query($db_connect, "SELECT * FROM individual ORDER BY id ASC LIMIT $limit");
