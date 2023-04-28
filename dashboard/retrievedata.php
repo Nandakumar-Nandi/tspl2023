@@ -24,7 +24,6 @@
                 $mobileno_1 = $fetch['Mobile_no'];
                 $mobileno_2 = $fetch['Mobile_no_Alt'];
                 $email_1 = $fetch['Email_Prim'];
-                $email_2 = $fetch['Email_Alt'];
                 $father = $fetch['Father_name'];
                 $address = $fetch['Address'];
                 $remarks = $fetch['Remarks'];
@@ -39,7 +38,7 @@
                         </tr>
                         <tr class="table_row table_part">
                             <td class="table_column">
-                                PERSONAL DATA
+                                DETAILS
                             </td>
                         </tr>
                         <tr class="table_row">
@@ -103,16 +102,10 @@
                                 Primary Email
                             </td>
                             <td class="table_column table_head s-column">
-                                Secondary Email
-                            </td>
-                            <td class="table_column table_head s-column">
                                 Father Name
                             </td>
                             <td class="table_column s-column">
                                 '.$email_1.'
-                            </td>
-                            <td class="table_column s-column">
-                                '.$email_2.'
                             </td>
                             <td class="table_column s-column">
                                 '.$father.'

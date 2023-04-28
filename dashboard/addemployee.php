@@ -5,38 +5,29 @@
 	
 
 
-		$employee_id = mysqli_real_escape_string($db_connect, $_POST['employee_id']);
-		$firstname = mysqli_real_escape_string($db_connect, $_POST['firstname']);
-		$middlename = mysqli_real_escape_string($db_connect, $_POST['middlename']);
-		$lastname = mysqli_real_escape_string($db_connect, $_POST['lastname']);
-		$phone = mysqli_real_escape_string($db_connect, $_POST['phone']);
-		$jobtype = mysqli_real_escape_string($db_connect, $_POST['jobtype']);
-		$dateemployed = mysqli_real_escape_string($db_connect, $_POST['dateemployed']);
-		$resaddress = mysqli_real_escape_string($db_connect, $_POST['resaddress']);
-		$reslocation = mysqli_real_escape_string($db_connect, $_POST['reslocation']);
-		$gpsreslocation = mysqli_real_escape_string($db_connect, $_POST['gpsreslocation']);
-		$resdirection = mysqli_real_escape_string($db_connect, $_POST['resdirection']);
-		$passport_photo_name = mysqli_real_escape_string($db_connect, $_POST['passport_photo_name']);
-		$idnumber = mysqli_real_escape_string($db_connect, $_POST['idnumber']);
-		$idtype = mysqli_real_escape_string($db_connect, $_POST['idtype']);
-		$nationalID_name = mysqli_real_escape_string($db_connect, $_POST['nationalID_name']);
-		$fullname = mysqli_real_escape_string($db_connect, $_POST['fullname']);
-		$relationship = mysqli_real_escape_string($db_connect, $_POST['relationship']);
-		$kinphone = mysqli_real_escape_string($db_connect, $_POST['kinphone']);
-		$kinresaddress = mysqli_real_escape_string($db_connect, $_POST['kinresaddress']);
-		$kinresdirection = mysqli_real_escape_string($db_connect, $_POST['kinresdirection']);
-		$empstatus = mysqli_real_escape_string($db_connect, $_POST['empstatus']);
-	
+		$id = mysqli_real_escape_string($db_connect, $_POST['id']);
+		$Name = mysqli_real_escape_string($db_connect, $_POST['Name']);
+		$pan_name = mysqli_real_escape_string($db_connect, $_POST['pan_name']);
+		$password = mysqli_real_escape_string($db_connect, $_POST['password']);
+		$d_o_b = mysqli_real_escape_string($db_connect, $_POST['d_o_b']);
+		$pan_no = mysqli_real_escape_string($db_connect, $_POST['pan_no']);
+		$aadhar_no = mysqli_real_escape_string($db_connect, $_POST['aadhar_no']);
+		$mob_no = mysqli_real_escape_string($db_connect, $_POST['mob_no']);
+		$alt_mob_no = mysqli_real_escape_string($db_connect, $_POST['alt_mob_no']);
+		$email = mysqli_real_escape_string($db_connect, $_POST['email']);
+		$father_name = mysqli_real_escape_string($db_connect, $_POST['father_name']);
+		$address = mysqli_real_escape_string($db_connect, $_POST['address']);
+		$remarks = mysqli_real_escape_string($db_connect, $_POST['remarks']);
+
 										
 		//Check if user already exists
-		$id_check =  mysqli_query($db_connect, "SELECT employee_id FROM client WHERE employee_id = '$employee_id' ");
+		$id_check =  mysqli_query($db_connect, "SELECT id FROM client WHERE id = '$id' ");
 								
 		//Count the amount of rows where username = $username
 		$check_id = mysqli_num_rows($id_check);
 		ob_end_clean();	
 		if ($check_id == 0) {
-
-			$query = mysqli_query($db_connect, "INSERT INTO `client` (`id`, `employee_id`, `first_name`, `middle_name`, `last_name`, `phone`, `employee_image`, `id_type`, `id_number`, `id_card_image`, `residence_address`, `residence_location`, `residence_direction`, `residence_gps`, `next_of_kin`, `relationship`, `phone_of_kin`, `kin_residence`, `kin_residence_direction`, `date_employed`, `job_type`, `status`) VALUES (NULL, '$employee_id', '$firstname', '$middlename', '$lastname', '$phone', '$passport_photo_name', '$idtype', '$idnumber', '$nationalID_name', '$resaddress', '$reslocation', '$resdirection', '$gpsreslocation', '$fullname', '$relationship', '$kinphone', '$kinresaddress', '$kinresdirection', '$dateemployed', '$jobtype', '$empstatus')");
+			$query = mysqli_query($db_connect, "INSERT INTO `client` (`id`, `Name`, `pan_name`, `password`, `d_o_b`, `pan_no`, `aadhar_no`, `mob_no`, `alt_mob_no`, `email`, `father_name`, `address`, `remarks`) VALUES ('$id', '$Name', '$pan_name', '$password', '$d_o_b', '$pan_no', '$aadhar_no', '$mob_no', '$alt_mob_no', '$email', '$father_name', '$address', '$remarks')");
 			$querycount = mysqli_num_rows($query);
 
 			ob_end_clean();			

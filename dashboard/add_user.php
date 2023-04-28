@@ -12,7 +12,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Sharpnet Employee Record</title>
+        <title>Business client Record</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="../css/jquery-ui.css" />
@@ -28,16 +28,14 @@
 	<section class="side-menu fixed left">
 		<div class="top-sec">
 			<div class="dash_logo">
-				<img src="../images/logo.png" alt="Sharpnet Logo">
+				<img src="../images/logo.png" alt="">
 			</div>			
-			<p>Employee Records</p>
+			<p>Client Records</p>
 		</div>
 		<ul class="nav">
-			<li class="nav-item"><a href="../dashboard"><span class="nav-icon"><i class="fa fa-users"></i></span>All Employees</a></li>
-			<li class="nav-item"><a href="../dashboard/current_employees.php"><span class="nav-icon"><i class="fa fa-check"></i></span>Current Employees</a></li>
-			<li class="nav-item"><a href="../dashboard/past_employees.php"><span class="nav-icon"><i class="fa fa-times"></i></span>Past Employees</a></li>
+			<li class="nav-item"><a href="../dashboard"><span class="nav-icon"><i class="fa fa-users"></i></span>All CLIENTS</a></li>
 			<?php if($usertype == "Admin"){ ?>
-				<li class="nav-item"><a href="../dashboard/add_employee.php"><span class="nav-icon"><i class="fa fa-user-plus"></i></span>Add Employee</a></li>
+				<li class="nav-item"><a href="../dashboard/add_employee.php"><span class="nav-icon"><i class="fa fa-user-plus"></i></span>Add New Client</a></li>
 				<li class="nav-item current"><a href="../dashboard/add_user.php"><span class="nav-icon"><i class="fa fa-user"></i></span>Add User</a></li>
 			<?php		} ?>
 			<li class="nav-item"><a href="../dashboard/settings.php"><span class="nav-icon"><i class="fa fa-cog"></i></span>Settings</a></li>
@@ -65,21 +63,16 @@
 						<div class="error firstnameerror"></div>
 					</div>
 					<div class="input-box input-small left">
-						<label for="lastname">Last Name</label><br>
-						<input type="text" class="inputField lastname" name="lastname">
-						<div class="error lastnameerror"></div>
-					</div>
-					<div class="input-box input-small right">
 						<label for="username">Username</label><br>
 						<input type="text" class="inputField username" name="username">
 						<div class="error usernameerror"></div>
 					</div>
-					<div class="input-box input-small left">
+					<div class="input-box input-small right">
 						<label for="password">Password</label><br>
 						<input type="password" class="inputField password" name="password">
 						<div class="error passworderror"></div>
 					</div>
-					<div class="input-box input-small right">
+					<div class="input-box input-small left">
 						<label for="confirmpassword">Confirm Password</label><br>
 						<input type="password" class="inputField confirmpassword" name="confirmpassword">
 						<div class="error confirmpassworderror"></div>
