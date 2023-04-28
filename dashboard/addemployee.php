@@ -20,12 +20,11 @@
 
 										
 		//Check if user already exists
-			$query = mysqli_query($db_connect, "INSERT INTO client (Name,Pancard_name,Password,D_O_B,Pan_Number,Aadhar_no,Mobile_no,Mobile_no_Alt,Email_Prim,Father_name,Address,Remarks) VALUES ('$Name', '$pan_name', '$password', '$d_o_b', '$pan_no', '$aadhar_no', '$mob_no', '$alt_mob_no', '$email', '$father_name', '$address', '$remarks')");
-			$querycount = mysqli_num_rows($query);
-
+			$count=mysqli_num_rows(mysqli_query($db_connect,"Select * from individual"));
+			$query = mysqli_query($db_connect, "INSERT INTO individual (Name,Pancard_name,Password,D_O_B,Pan_Number,Aadhar_no,Mobile_no,Mobile_no_Alt,Email_Prim,Father_name,Address,Remarks) VALUES ('$Name', '$pan_name', '$password', '$d_o_b', '$pan_no', '$aadhar_no', '$mob_no', '$alt_mob_no', '$email', '$father_name', '$address', '$remarks')");
+			$count1=mysqli_num_rows(mysqli_query($db_connect,"Select * from individual"));
 			ob_end_clean();			
-			if($query){
-
+			if($count1>$count){
 				echo json_encode(array("status" => "Success"));
 				exit();			
 			} else {

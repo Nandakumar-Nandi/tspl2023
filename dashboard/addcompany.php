@@ -29,16 +29,15 @@
 
 										
 		//Check if user already exists
+			$count=mysqli_num_rows(mysqli_query($db_connect,"Select * from company"));
 			$query = mysqli_query($db_connect, "INSERT INTO company
             (Name,DateofIncorporation,DateofCommencement,CIN,Address,PAN,IT_Password,TAN,TAN_Password,TRACES_LOGIN,TRACES_Password,MCA_IDV2,MCA_PasswordV2,MCA_IDV3,MCA_PasswordV3,FIRMS_ENTITYUSER,FIRMS_ENTITY_PASSWORD,FIRMS_BUSINESS_USER,FIRMS_BUSINESS_PASSWORD,DIRECTORS_DETAILS,NOTESandHINTS) 
             VALUES ('$Name', '$doi', '$doc', '$d_o_b', '$cin', '$address', '$pan', '$itpwd', '$tan', 
             '$tanpwd', '$traces', '$tracespwd' '$mca_idv2', '$mca_idv2_pwd' '$mca_idv3', '$mca_idv3_pwd ', '$firmsenityuser' '$firmsenityuserpwd', '$buisnessuser',
              '$buisnesspwd' '$directordetails', '$notes')");
-			$querycount = mysqli_num_rows($query);
-
+			$count1=mysqli_num_rows(mysqli_query($db_connect,"Select * from company"));
 			ob_end_clean();			
-			if($query){
-
+			if($count1>$count){
 				echo json_encode(array("status" => "Success"));
 				exit();			
 			} else {
