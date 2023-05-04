@@ -107,9 +107,6 @@
 	 			<div class="input-box">
 	 				<button  type="submit" class="submitField sign_in"><span class="sign-icon"><i class="fa fa-lock"></i></span> Sign in</button>
 	 			</div>
-                <div class="input-box">
-                    <button  type="submit" class="submitField sign_in">Sign in</button>
-                </div>
 	 		</form>
  		</div>
  	</div>
