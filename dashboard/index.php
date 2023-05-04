@@ -60,11 +60,11 @@
 				?>
 				<ul class="client_list">
 					<li class="client_list_head">
-						<div class="client_item_head emp_id">Name</div>
-						<div class="client_item_head emp_name">Pan Number</div>
-						<div class="client_item_head">Password</div>
-						<div class="client_item_head">Pan Card name</div>
-						<div class="client_item_head emp_status">Aadhar Number</div>
+						<div class="client_item_head emp_id">NAME</div>
+						<div class="client_item_head emp_name">PAN NUMBER</div>
+						<div class="client_item_head">PASSWORD</div>
+						<div class="client_item_head">PAN NAME</div>
+						<div class="client_item_head emp_status">AADHAR</div>
 					</li>
 					<div id="displayempList">
 						<?php
@@ -166,11 +166,11 @@
 				?>
 				<ul class="client_list">
 					<li class="client_list_head">
-						<div class="client_item_head emp_id">Name</div>
-						<div class="client_item_head emp_name">Pan Number</div>
-						<div class="client_item_head">Password</div>
-						<div class="client_item_head">Pan Card name</div>
-						<div class="client_item_head emp_status">Aadhar Number</div>
+						<div class="client_item_head emp_id">NAME</div>
+						<div class="client_item_head emp_name">PAN NUMBER</div>
+						<div class="client_item_head">CIN</div>
+						<div class="client_item_head">TAN</div>
+						<div class="client_item_head emp_status">IT PASSWORD</div>
 					</li>
 					<div id="displayempList">
 						<?php
@@ -178,20 +178,20 @@
 								while($fetch = mysqli_fetch_assoc($getemp)){
 									$id = $fetch['id'];
 									$name = $fetch['Name'];
-									$pan_no = $fetch['Pan_Number'];
-									$password = $fetch['Password'];
-									$pan_name = $fetch['Pancard_name'];
-									$aadhar_no = $fetch['Aadhar_no'];
+									$pan = $fetch['pan'];
+									$cin = $fetch['cin'];
+									$tan = $fetch['tan'];
+									$itpwd = $fetch['itpwd'];
 
 									if($password == ""){
 										if($usertype == "Admin"){
 											echo '										
 												<li class="client_item">
 													<div class="l_name">'.$name.'</div>
-													<div class="l_pan_no">'.$pan_no.'</div>
-													<div class="l_password">'.$password.'</div>
-													<div class="l_pan_name">'.$pan_name.'</div>
-													<div class="l_aadhar_no">'.$aadhar_no.'</div>
+													<div class="l_pan">'.$pan.'</div>
+													<div class="l_cin">'.$cin.'</div>
+													<div class="l_tan">'.$tan.'</div>
+													<div class="itpwd">'.$itpwd.'</div>
 													<div class="emp_column">
 														<ul class="action_list">
 															<li class="action_item action_view" data-id="'.$id.'" title="View"><i class="fa fa-eye"></i></li>
@@ -203,12 +203,11 @@
 											';
 										} else {
 											echo '										
-												<li class="client_item">
-												<div class="l_name">'.$name.'</div>
-												<div class="l_pan_no">'.$pan_no.'</div>
-												<div class="l_password">'.$password.'</div>
-												<div class="l_pan_name">'.$pan_name.'</div>
-												<div class="l_aadhar_no">'.$aadhar_no.'</div>
+													<div class="l_name">'.$name.'</div>
+													<div class="l_pan">'.$pan.'</div>
+													<div class="l_cin">'.$cin.'</div>
+													<div class="l_tan">'.$tan.'</div>
+													<div class="itpwd">'.$itpwd.'</div>
 												<div class="emp_column">
 														<ul class="action_list">
 															<li class="action_item action_view" data-id="'.$id.'" title="View"><i class="fa fa-eye"></i></li>
@@ -221,11 +220,11 @@
 										if($usertype == "Admin"){
 											echo '										
 												<li class="client_item">
-												<div class="l_name">'.$name.'</div>
-												<div class="l_pan_no">'.$pan_no.'</div>
-												<div class="l_password">'.$password.'</div>
-												<div class="l_pan_name">'.$pan_name.'</div>
-												<div class="l_aadhar_no">'.$aadhar_no.'</div>
+													<div class="l_name">'.$name.'</div>
+													<div class="l_pan">'.$pan.'</div>
+													<div class="l_cin">'.$cin.'</div>
+													<div class="l_tan">'.$tan.'</div>
+													<div class="itpwd">'.$itpwd.'</div>
 												<div class="emp_column">
 														<ul class="action_list">
 															<li class="action_item action_view" data-id="'.$id.'" title="View"><i class="fa fa-eye"></i></li>
@@ -239,11 +238,11 @@
 
 											echo '										
 												<li class="client_item">
-												<div class="l_name">'.$name.'</div>
-												<div class="l_pan_no">'.$pan_no.'</div>
-												<div class="l_password">'.$password.'</div>
-												<div class="l_pan_name">'.$pan_name.'</div>
-												<div class="l_aadhar_no">'.$aadhar_no.'</div>
+													<div class="l_name">'.$name.'</div>
+													<div class="l_pan">'.$pan.'</div>
+													<div class="l_cin">'.$cin.'</div>
+													<div class="l_tan">'.$tan.'</div>
+													<div class="itpwd">'.$itpwd.'</div>
 												<div class="emp_column">
 														<ul class="action_list">
 															<li class="action_item action_view" data-id="'.$id.'" title="View"><i class="fa fa-eye"></i></li>
@@ -272,11 +271,11 @@
 				?>
 				<ul class="client_list">
 					<li class="client_list_head">
-						<div class="client_item_head emp_id">Name</div>
-						<div class="client_item_head emp_name">Pan Number</div>
-						<div class="client_item_head">Password</div>
-						<div class="client_item_head">Pan Card name</div>
-						<div class="client_item_head emp_status">Aadhar Number</div>
+						<div class="client_item_head emp_id">NAME</div>
+						<div class="client_item_head emp_name">PAN NUMBER</div>
+						<div class="client_item_head">REG.NO</div>
+						<div class="client_item_head">TAN</div>
+						<div class="client_item_head emp_status">TAN PASSWORD</div>
 					</li>
 					<div id="displayempList">
 						<?php
@@ -284,20 +283,20 @@
 								while($fetch = mysqli_fetch_assoc($getemp)){
 									$id = $fetch['id'];
 									$name = $fetch['Name'];
-									$pan_no = $fetch['Pan_Number'];
-									$password = $fetch['Password'];
-									$pan_name = $fetch['Pancard_name'];
-									$aadhar_no = $fetch['Aadhar_no'];
+									$pan = $fetch['pan'];
+									$reg_no = $fetch['reg_no'];
+									$tan = $fetch['tan'];
+									$tanpwd= $fetch['tanpwd'];
 
 									if($password == ""){
 										if($usertype == "Admin"){
 											echo '										
 												<li class="client_item">
 													<div class="l_name">'.$name.'</div>
-													<div class="l_pan_no">'.$pan_no.'</div>
-													<div class="l_password">'.$password.'</div>
-													<div class="l_pan_name">'.$pan_name.'</div>
-													<div class="l_aadhar_no">'.$aadhar_no.'</div>
+													<div class="l_pan">'.$pan.'</div>
+													<div class="l_reg_no">'.$reg_no.'</div>
+													<div class="l_tan">'.$tan.'</div>
+													<div class="l_tanpwd">'.$tanpwd.'</div>
 													<div class="emp_column">
 														<ul class="action_list">
 															<li class="action_item action_view" data-id="'.$id.'" title="View"><i class="fa fa-eye"></i></li>
@@ -310,11 +309,11 @@
 										} else {
 											echo '										
 												<li class="client_item">
-												<div class="l_name">'.$name.'</div>
-												<div class="l_pan_no">'.$pan_no.'</div>
-												<div class="l_password">'.$password.'</div>
-												<div class="l_pan_name">'.$pan_name.'</div>
-												<div class="l_aadhar_no">'.$aadhar_no.'</div>
+											<div class="l_name">'.$name.'</div>
+													<div class="l_pan">'.$pan.'</div>
+													<div class="l_reg_no">'.$reg_no.'</div>
+													<div class="l_tan">'.$tan.'</div>
+													<div class="l_tanpwd">'.$tanpwd.'</div>
 												<div class="emp_column">
 														<ul class="action_list">
 															<li class="action_item action_view" data-id="'.$id.'" title="View"><i class="fa fa-eye"></i></li>
@@ -327,11 +326,11 @@
 										if($usertype == "Admin"){
 											echo '										
 												<li class="client_item">
-												<div class="l_name">'.$name.'</div>
-												<div class="l_pan_no">'.$pan_no.'</div>
-												<div class="l_password">'.$password.'</div>
-												<div class="l_pan_name">'.$pan_name.'</div>
-												<div class="l_aadhar_no">'.$aadhar_no.'</div>
+											<div class="l_name">'.$name.'</div>
+													<div class="l_pan">'.$pan.'</div>
+													<div class="l_reg_no">'.$reg_no.'</div>
+													<div class="l_tan">'.$tan.'</div>
+													<div class="l_tanpwd">'.$tanpwd.'</div>
 												<div class="emp_column">
 														<ul class="action_list">
 															<li class="action_item action_view" data-id="'.$id.'" title="View"><i class="fa fa-eye"></i></li>
@@ -346,11 +345,10 @@
 											echo '										
 												<li class="client_item">
 												<div class="l_name">'.$name.'</div>
-												<div class="l_pan_no">'.$pan_no.'</div>
-												<div class="l_password">'.$password.'</div>
-												<div class="l_pan_name">'.$pan_name.'</div>
-												<div class="l_aadhar_no">'.$aadhar_no.'</div>
-												<div class="emp_column">
+													<div class="l_pan">'.$pan.'</div>
+													<div class="l_reg_no">'.$reg_no.'</div>
+													<div class="l_tan">'.$tan.'</div>
+													<div class="l_tanpwd">'.$tanpwd.'</div>
 														<ul class="action_list">
 															<li class="action_item action_view" data-id="'.$id.'" title="View"><i class="fa fa-eye"></i></li>
 														</ul>

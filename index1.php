@@ -80,8 +80,8 @@
     </head>
  <body id="loginPage">
  	<div class="login_wrapper clearfix">
- 		<div class="logo_login">
- 			<img src="images/logo.png" alt=" Logo">
+ 		<div class="logo_login" >
+ 			<a href="index.html"><img src="images/logo.png" alt=" Logo"></a>
  		</div>
         <?php
             if(isset($_GET['error'])){
@@ -107,6 +107,9 @@
 	 			<div class="input-box">
 	 				<button  type="submit" class="submitField sign_in"><span class="sign-icon"><i class="fa fa-lock"></i></span> Sign in</button>
 	 			</div>
+                <div class="input-box">
+                    <button  type="submit" class="submitField sign_in">Sign in</button>
+                </div>
 	 		</form>
  		</div>
  	</div>

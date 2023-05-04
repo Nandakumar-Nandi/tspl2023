@@ -130,7 +130,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     height: 45px;
     padding: 5px 10px;
-    border-radius: 25px;
+    border-radius: 0px;
     border: 1px solid #ff339a;
     background: #ff339a;
     color: #fff;
@@ -149,7 +149,7 @@ h1, h2, h3, h4, h5, h6 {
     background: #024667;
 }
 .dash_logo{
-    width: 80%;
+    width: 65%;
     height: 70px;
     margin: 5px auto;
     overflow: hidden;
